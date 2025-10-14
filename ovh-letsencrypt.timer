@@ -1,0 +1,21 @@
+[Unit]
+Description=OVH Let's Encrypt Certificate Renewal Timer
+Requires=ovh-letsencrypt.service
+
+[Timer]
+# Run on the 1st day of every month at 3:00 AM
+OnCalendar=monthly
+# On the 1st and 15th of each month at 3:00 AM (more frequent)
+# OnCalendar=*-*-01,15 03:00:00
+
+# Run 15 minutes after boot if we missed the scheduled time
+OnBootSec=15min
+
+# Add random delay of 0-1 hour to avoid load spikes
+RandomizedDelaySec=1h
+
+# Keep trying if it fails
+Persistent=true
+
+[Install]
+WantedBy=timers.target
