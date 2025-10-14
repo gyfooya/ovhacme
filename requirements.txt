@@ -1,0 +1,19 @@
+# OVH API client
+ovh>=1.0.0
+
+# ACME protocol implementation
+acme>=2.7.0
+
+# Cryptography library
+cryptography>=41.0.0
+
+# JOSE implementation for JWT
+josepy>=1.14.0
+
+# DNS resolution for verification
+dnspython>=2.4.0
+
+# Additional dependencies (usually installed automatically)
+requests>=2.31.0
+pyOpenSSL>=23.0.0
+pytz>=2023.3
