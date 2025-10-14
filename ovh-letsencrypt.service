@@ -1,0 +1,26 @@
+[Unit]
+Description=OVH Let's Encrypt Certificate Renewal
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+WorkingDirectory=/home/noname/ovhacme
+ExecStart=/home/noname/ovhacme/venv/bin/python /home/noname/ovhacme/ovhacme.py
+
+# Restart policy
+Restart=on-failure
+RestartSec=5m
+
+# Security settings
+PrivateTmp=yes
+NoNewPrivileges=true
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=ovh-letsencrypt
+
+[Install]
+WantedBy=multi-user.target
