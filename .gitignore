@@ -1,0 +1,21 @@
+# Configuration file with secrets
+config.py
+
+# Python virtual environment
+venv/
+env/
+*.pyc
+__pycache__/
+
+# Certificate and private key files
+*.crt
+*.key
+*.pem
+*.csr
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
