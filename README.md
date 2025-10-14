@@ -22,7 +22,7 @@ Automatic Let's Encrypt wildcard and apex domain certificate generation using OV
 ### 1. Clone or download this repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/gyfooya/ovhacme.git
 cd ovhacme
 ```
 
@@ -31,8 +31,6 @@ cd ovhacme
 ```bash
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
-# or
-venv\Scripts\activate  # Windows
 ```
 
 ### 3. Install dependencies
